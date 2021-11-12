@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-RandomWordApplication<randomword>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.randomword.api.RandomWordApplication",
+            "projectName": "randomword",
+            "args": ""
+        }
+    ]
+}

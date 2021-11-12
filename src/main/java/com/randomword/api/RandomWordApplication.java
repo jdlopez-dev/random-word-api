@@ -18,4 +18,17 @@ public class RandomWordApplication {
 	public String randomWord() {
 		return "random-word";
 	}
+
+	@GetMapping("/word")
+	public String randomWord(@RequestParam(value = "length", defaultValue = "10") int length) {
+		return getRandomWord(length);
+	}
+
+	private String getRandomWord(int length) {
+		StringBuilder sb = new StringBuilder();
+		for (int i = 0; i < length; i++) {
+			sb.append((char) (Math.random() * 26 + 'a'));
+		}
+		return sb.toString();
+	}
 }
