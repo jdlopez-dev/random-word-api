@@ -21,7 +21,7 @@ class LoadDatabase {
             randomWorRepository.save(new RandomWord("Chile"));
             randomWorRepository.save(new RandomWord("Peru"));
             randomWorRepository.save(new RandomWord("Venezuela"));
-            logger.info("Preloading " + randomWorRepository.count() + " words");
+            logger.info("Preloading {} words",randomWorRepository.count());
         };
     }
 }

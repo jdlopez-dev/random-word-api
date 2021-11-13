@@ -1,7 +1,10 @@
 package com.randomword.api.service;
 
+import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import org.springframework.stereotype.Service;
 
@@ -12,9 +15,11 @@ import com.randomword.api.repository.RandomWordRepository;
 public class RandomWordService {
 
     private RandomWordRepository randomWordRepository;
+    private Random rand;
 
-    RandomWordService(RandomWordRepository randomWordRepository) {
+    RandomWordService(RandomWordRepository randomWordRepository) throws NoSuchAlgorithmException {
         this.randomWordRepository = randomWordRepository;
+        this.rand = SecureRandom.getInstanceStrong();
     }
 
     public List<RandomWord> getCountries() {
@@ -29,15 +34,18 @@ public class RandomWordService {
         return sb.toString();
     }
 
-    public String randomWord() {
-        ArrayList<String> words = new ArrayList<String>();
+    public RandomWord randomWord() {
+        ArrayList<String> words = new ArrayList<>();
         words.add("bitcoin");
         words.add("ethereum");
         words.add("ripple");
         words.add("litecoin");
         words.add("monero");
         words.add("dash");
-        return words.get((int) (Math.random() * words.size()));
+
+        String word = words.get((rand.nextInt(words.size())));
+
+        return new RandomWord(word);
     }
 
 }

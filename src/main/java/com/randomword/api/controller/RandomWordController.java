@@ -17,7 +17,7 @@ public class RandomWordController {
     private RandomWordService randomWordService;
 
     @GetMapping("/")
-    public String randomWord() {
+    public RandomWord randomWord() {
         return randomWordService.randomWord();
     }
 
