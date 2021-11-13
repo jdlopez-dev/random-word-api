@@ -4,6 +4,8 @@
 
 [github actions deploy spring boot to heroku](https://medium.com/@reachansari/automatic-deployment-to-heroku-ci-cd-spring-boot-maven-github-actions-2c63f7fd79d1)
 
+[timezone java](https://medium.com/@anushkadarr/guide-to-time-zone-handling-for-rest-apis-in-java-4b76b8f31c56)
+
 ***
 
 Steps to set the $JAVA_HOME environment variable on macOS.
