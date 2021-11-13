@@ -27,7 +27,7 @@ public class RandomWordController {
     }
 
     @GetMapping("/countries")
-    List<RandomWord> countries() {
+    public List<RandomWord> countries() {
         return randomWordService.getCountries();
     }
 }
