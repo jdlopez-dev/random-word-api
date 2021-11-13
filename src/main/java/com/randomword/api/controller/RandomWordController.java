@@ -1,5 +1,8 @@
 package com.randomword.api.controller;
 
+import java.util.List;
+
+import com.randomword.api.model.RandomWord;
 import com.randomword.api.service.RandomWordService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,5 +24,10 @@ public class RandomWordController {
     @GetMapping("/word")
     public String randomWord(@RequestParam(value = "length", defaultValue = "10") int length) {
         return randomWordService.getRandomWord(length);
+    }
+
+    @GetMapping("/countries")
+    List<RandomWord> countries() {
+        return randomWordService.getCountries();
     }
 }
