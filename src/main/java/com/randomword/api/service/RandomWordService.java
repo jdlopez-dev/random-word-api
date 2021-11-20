@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.randomword.api.model.RandomWord;
@@ -14,11 +15,11 @@ import com.randomword.api.repository.RandomWordRepository;
 @Service
 public class RandomWordService {
 
+    @Autowired
     private RandomWordRepository randomWordRepository;
     private Random rand;
 
-    RandomWordService(RandomWordRepository randomWordRepository) throws NoSuchAlgorithmException {
-        this.randomWordRepository = randomWordRepository;
+    RandomWordService() throws NoSuchAlgorithmException {
         this.rand = SecureRandom.getInstanceStrong();
     }
 
