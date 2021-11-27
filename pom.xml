@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.randomword</groupId>
 	<artifactId>randomword</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<name>random word</name>
 	<description>Generate words</description>
 	<properties>
@@ -21,7 +21,7 @@
 		<connection>scm:git:${project.scm.url}</connection>
 		<developerConnection>scm:git:${project.scm.url}</developerConnection>
 		<url>git@github.com:jdlopez-dev/random-word-api.git</url>
-		<tag>0.0.1</tag>
+		<tag>HEAD</tag>
 	</scm>
 	<dependencies>
 		<dependency>
