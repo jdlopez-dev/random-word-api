@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CICD
+name: Create Release
 
 # Controls when the workflow will run
 on:
@@ -17,6 +17,8 @@ jobs:
 
     - name: Build and Test
       uses: qcastel/github-actions-maven-cmd@master
+      env:
+        JAVA_HOME: /usr/lib/jvm/java-17-openjdk/
       with:
         maven-args: "clean install -Ddockerfile.skip -DdockerCompose.skip -Djib.skip"
 
